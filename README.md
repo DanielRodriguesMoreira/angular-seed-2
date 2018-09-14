@@ -1,2 +1,1 @@
-# angular-seed-3
-sdfsdf
+# angular-seed-2
