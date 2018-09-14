@@ -2,12 +2,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: microsoft/azure-cli
+    - image: circleci/node:8
+
+    working_directory: ~/repo
 
     steps:
-      - checkout
-      - run: az --version
-      # replace with Azure's username and password
-      #- run: az login -u <USERNAME> -p <PASSWORD>
-      #- run: ~/repo/test.sh
+    - checkout
+    - run: npm install
+    - run: npm run lint
 
